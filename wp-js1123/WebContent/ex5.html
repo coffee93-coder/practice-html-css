@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script type="text/javascript">
+var obj1 = new Object();
+obj1.name = "홍길동";
+obj1.age = "30";
+obj1.show = function(){
+	console.log(this.name +" : "+ this.age );		
+}
+obj1.show(); // 왜 ()을 넣는가?
+//객체 생성 방법 (리터럴 타입)		
+var obj2 = {};
+obj2.name = "홍길동2";
+obj2.age = "60";
+obj2.show = function(){
+	console.log(this.name +" : "+ this.age );		
+}
+obj2.show();
+
+var jsonObj = {
+		name : "홍길동",
+		age: 60,
+		showinfo: function(){
+			console.log(this.name +" : "+ this.age );		
+		}
+}
+jsonObj.showinfo();
+
+//(생성자) 함수를 사용하는 방법
+
+var Myobject = function(name,	age){	 // class가 없으니까 객체 지향이 아니지만, 객체들로 이루어져 있음.
+	this.name = name;
+	this.age = age;
+}
+
+//prototype이라는 객체 :
+Myobject.prototype.school = "bit academy";
+Myobject.prototype.course = "web dev";
+Myobject.prototype.showinfo = function(){
+	console.log(this.name + " : " + this.age + " : "+ this.school + " : "+ this.course );
+}
+
+var obj3 = new Myobject("둘리",10);
+console.log(obj3);
+console.log(obj3.school + " : "+ obj3.course);
+
+var obj4 = new Myobject("마이콜",20);
+console.log(obj4);
+console.log(obj4.school +" : " +obj4.course);
+
+obj3.school = "sbs academy";
+obj4.course = "android";
+
+obj3.showinfo();
+obj4.showinfo();
+</script> -->
+<script type="text/javascript">
+var rect= {
+		x1: 10 ,
+		y1: 10,
+		x2: 200,
+		y2: 200,
+		backgroundColor: "#600",
+		show:function(){
+			document.write(
+					"<div style='position :absolute; width:"+ (this.x2-this.x1) +
+						"px; height:"+(this.y2-this.y1)+
+						"px; background-color:" + this.backgroundColor+
+						" '></div>"
+			)
+		}
+}
+rect.show();
+
+var rect2 = {
+		x1: 0 ,
+		y1: 0,
+		x2: 50,
+		y2: 50,
+		backgroundColor: "#060",
+		show:function(){
+			document.write(
+					"<div style='position :absolute; width:"+ (this.x2-this.x1) +
+						"px; height:"+(this.y2-this.y1)+
+						"px; background-color:" + this.backgroundColor+
+						" '></div>"
+			)
+		}
+}
+rect2.show();
+</script>
+</head>
+<body>
+<!-- <svg><rect width="300" height="100" style="fill:pink ;" /></svg> -->
+<!-- <div style='position :absolute; width: 190px; height:190px; background-color: #600 '></div> -->
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+var employee = {
+		name: "홍길동",
+		title: "과장",
+}
+//연관 배열 ( associted Array)
+console.log(employee["name"]);
+
+var map = {};
+map["one"] = 1;
+map["test"] = function(){
+	console.log("hello");
+}
+map["test"]();
+console.log(employee.name);
+
+var colors= ["a", "b", "c","d"];
+var fruit = ["x","y","z","w"];
+
+var obj = fruit.concat(colors)
+console.log(typeof obj);
+
+ var test = fruit.join(",");
+console.log(test); 
+
+ var test1=fruit.splice(1,1);
+console.log(test1); 
+
+Array.prototype.remove = function(index ){
+	this.splice(index,1);
+}
+Array.prototype.insert = function(index, value ){
+	this.splice(index,0,value);
+}
+
+fruit.remove(2); 
+console.log(fruit);
+
+colors.splice(1,0,"green","blue");
+console.log(colors)
+</script>
+</head>
+<body>
+
+</body>
+</html>
